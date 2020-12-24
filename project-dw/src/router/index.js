@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/Home.vue'
 import Manage from '@/components/manage/Manage.vue'
 import Sign from '@/components/info/Sign.vue'
+import Fill from '@/components/info/Fill.vue'
+import Success from '@/components/info/Success.vue'
 
 Vue.use(Router)
 
@@ -25,6 +27,16 @@ export default new Router({
             path:'/sign',
             name:'Sign',
             component:Sign
+        },
+        {
+            path:'/fill',
+            name:'Fill',
+            component:Fill
+        },
+        {
+            path:'/success',
+            name:'Success',
+            component:Success
         }
     ]
 })

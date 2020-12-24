@@ -35,8 +35,7 @@
           background
           layout="prev, pager, next"
           :pager-count="9"
-          :total="90"
-          
+          :total="90"          
           >
         </el-pagination>
     </div>

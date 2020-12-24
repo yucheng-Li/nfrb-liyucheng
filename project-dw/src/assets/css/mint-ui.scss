@@ -8,4 +8,74 @@
     color: #FFFFFF;
     line-height: 25px;
 }
+.mint-cell-wrapper {
+    padding: 0;
+    background-image: none;
+    font-size: 1rem;
+}
+.mint-cell {
+    border-bottom: 1px solid  #EEEEEE;
+    
+font-size: 16px;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #666666;
+line-height: 24px;
+}
+.mint-cell-text {
+    display: block;
+}
+.buttom-no-border {
+    border-bottom: 0;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+font-size: 16px;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #CCCCCC;
+line-height: 24px;
+}
+::-moz-placeholder { /* Firefox 19+ */  
+    
+font-size: 16px;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #CCCCCC;
+line-height: 24px;
+}
+:-ms-input-placeholder { /* IE 10+ */ 
+ 
+font-size: 16px;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #CCCCCC;
+line-height: 24px;
+}
+:-moz-placeholder { /* Firefox 18- */ 
+ 
+font-size: 16px;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #CCCCCC;
+line-height: 24px;
+}
+.mint-field .mint-cell-title {
+    width: 4.25rem;
+    padding-right: 1rem;
+}
+.van-cell--clickable {
+    width: 14rem;
+    height: 1.5rem;
+}
+.van-cell {
+    padding: 0;
+}
+.van-cell__value{
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #CCCCCC;
+    line-height: 24px
+}
+
 

@@ -12,7 +12,6 @@
         </div>
         <router-link to="/fill" class="sign-btn">开始填写</router-link>
     </div>
-
 </div>
 </template>
 
