@@ -246,7 +246,13 @@ export default {
                 hour = "0"+hour
             }
             var minute = date.getMinutes();
+            if(minute <= 9) {
+                minute = "0"+minute
+            }
             var second = date.getSeconds();
+            if(second <= 9) {
+                second = "0"+second
+            }
             var setdate = year+'-'+month+'-'+day+'-'+hour+':'+minute+':'+second
             this.info.nowDate = setdate
             for(let i in this.info) {
@@ -268,7 +274,7 @@ export default {
                 path: `/success`, 
             })
         }
-    }
+    },
 }
 </script>
  

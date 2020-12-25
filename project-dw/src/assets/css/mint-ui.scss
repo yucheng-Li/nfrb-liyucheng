@@ -80,5 +80,23 @@ line-height: 24px;
 .van-picker {
     height: 23.4rem;
 }
-
+.el-pagination {
+    float: right;
+    padding-right: 1rem;
+}
+.manage-center-select-choose {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65)!important;
+    line-height: 22px;
+    padding: 5px 12px;
+}
+.manage-center-select-choose-default {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.25);
+    line-height: 22px;
+}
 
