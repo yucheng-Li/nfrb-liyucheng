@@ -4,7 +4,7 @@
     <div class="manage-top">
         <span class="manage-top-word">智慧党建后台管理系统</span>
     </div>
-    <ManageCenter class="manage-content">
+    <ManageCenter class="manage-content" >
     </ManageCenter>
 </div>
 </template>
@@ -14,12 +14,12 @@ import ManageCenter from './ManageCenter'
 export default {
     data() {
         return {
-            
         }
     },
     components:{
         ManageCenter
-    }
+    },
+    
 }
 </script>
  

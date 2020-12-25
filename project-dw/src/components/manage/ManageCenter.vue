@@ -25,8 +25,8 @@
             <tr class="manage-center-td" v-for="item in info_list" :key=item.index>
                 <td class="manage-center-th-first">{{item.name}}</td>
                 <td>{{item.branch}}</td>
-                <td>{{item.time}}</td>
-                <td>{{item.code}}</td>
+                <td>{{item.nowDate}}</td>
+                <td>查看二维码</td>
             </tr>
         </table>
     </div>
@@ -46,70 +46,19 @@
 export default {
     data() {
         return {
-            info_list:[
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-                {
-                    name:'小明',
-                    branch:'南方网第二党支部',
-                    time:'2020-01-04  09:41:00',
-                    code:'查看二维码'
-                },
-            ],
+            info_list:[]
         }
     },
+    mounted() {
+        console.log("ss")
+        let that = this
+        this.$axios.get('http://127.0.0.1:5000/getinfo').then(function (response){
+            console.log('111')
+            that.info_list = response.data
+        }).catch(function(error){
+            console.log(error);
+        }); 
+    }
 }
 </script>
  
