@@ -133,7 +133,6 @@ export default {
 
     },
     mounted() {
-        console.log("ss")
         let that = this
         this.$axios.get('http://127.0.0.1:5000/getinfo').then(function (response){
             response.data.reverse()

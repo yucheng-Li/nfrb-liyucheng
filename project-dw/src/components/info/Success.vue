@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         go() {
-            this.$router.push('/fill');//要跳转的界面
+            this.$router.push('/');//要跳转的界面
         }
     },
 }

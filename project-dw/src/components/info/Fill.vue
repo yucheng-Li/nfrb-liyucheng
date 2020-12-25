@@ -133,6 +133,8 @@
 </template>
 
 <script>
+// import { mapMutations } from 'vuex'
+
 export default {
     data() {
         return {
@@ -237,6 +239,7 @@ export default {
             return year + '-' + month + '-' + day 
         },
         getinfo(){
+            
             var date = new Date();
             var year = date.getFullYear();
             var month = date.getMonth()+1;
@@ -263,16 +266,37 @@ export default {
                     return false
                 }
             }
-            console.log(this.info)
+            
+            if(this.info.sex == 'true') {
+                this.info.sex = '男' 
+            }else {
+                this.info.sex = '女' 
+            }
+            if(this.info.peopletype == 'true') {
+                this.info.peopletype = '正式党员' 
+            }else {
+                this.info.peopletype = '预备党员'
+            }
+            if(this.info.identity == 'true') {
+                this.info.identity = '是'
+            }else {
+                this.info.identity = '否'
+            }
+            this.$store.commit('increment', {
+              amount: this.info
+            })
+            // console.log(this.info)
+            let dothis = this
             this.$axios.post('http://127.0.0.1:5000/postinfo',this.info)
             .then(function (response) {
+                dothis.$router.push({
+                path: '/check', 
+            })
                 console.log(response);
             }).catch(function (error) {
                 console.log(error);
             });
-            this.$router.push({
-                path: `/success`, 
-            })
+            
         }
     },
 }

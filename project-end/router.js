@@ -16,8 +16,9 @@ router.get('/getinfo', function(req, res) {
     })
 })  
 router.post('/postinfo',async function(req, res, next) {
-    console.log('收到响应'+ req.body)
-    var body = req.body
+    console.log('进入post')  
+    let body = req.body
+    console.log(body)
     try {
     if (await User.findOne({ name: body.name })) {
       return res.status(200).json({
@@ -25,9 +26,11 @@ router.post('/postinfo',async function(req, res, next) {
         message: '已存在'
       })
     }
-    console.log('sasd')
+    console.log('这里报错1')
     // 创建用户，执行注册
-    await new User(body).save()
+     new User(body).save()
+
+    console.log('这里报错2')
     res.status(200).json({
       err_code: 0,
       message: 'OK'

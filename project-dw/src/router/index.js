@@ -5,7 +5,7 @@ import Manage from '@/components/manage/Manage.vue'
 import Sign from '@/components/info/Sign.vue'
 import Fill from '@/components/info/Fill.vue'
 import Success from '@/components/info/Success.vue'
-
+import Check from '@/components/info/Check.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -37,6 +37,11 @@ export default new Router({
             path:'/success',
             name:'Success',
             component:Success
+        },
+        {
+            path:'/check',
+            name:'Check',
+            component:Check
         }
     ]
 })

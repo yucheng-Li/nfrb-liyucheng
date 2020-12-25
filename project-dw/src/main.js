@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './assets/css/mint-ui.scss'
 import { DatetimePicker,Popup,Cell,Picker,Toast } from 'vant';
 import axios from 'axios';
+import store from './store/store'
+
 
 Vue.prototype.$axios = axios
 Vue.use(Toast);
@@ -24,5 +26,6 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')

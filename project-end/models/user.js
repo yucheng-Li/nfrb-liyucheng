@@ -15,7 +15,7 @@ var userSchema = new Schema({
         required:true
     },
     sex:{
-        type:Boolean,
+        type:String,
         required:true
     },
     nation:{
@@ -39,7 +39,7 @@ var userSchema = new Schema({
         required:true
     },
     peopletype:{
-        type:Boolean,
+        type:String,
         required:true
     },
     branch:{
@@ -55,7 +55,7 @@ var userSchema = new Schema({
         required:true
     },
     identity:{
-        type:Boolean,
+        type:String,
         required:true
     },
     place:{
